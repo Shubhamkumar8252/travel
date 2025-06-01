@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visit Mathura</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Navigation Styles */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+    }
+
+    nav .logo h2 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style-type: none;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      font-size: 18px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #444;
+    }
+
+    /* Hero Section Styles */
+    .hero {
+      background-image: url('imgvrindavan/v1.jpeg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero-content {
+      background-image: url('https://via.placeholder.com/1200x600?text=Welcome+to+Manali');
+      background-size: cover;
+      background-position: center;
+      padding: 30px;
+      border-radius: 10px;
+      color: #fff; /* Change text color */
+    }
+
+    .hero-content h1 {
+      font-size: 60px;
+      margin-bottom: 20px;
+      color: #ff7f50; /* Change text color of 'Welcome to Manali' */
+    }
+
+    .hero-content p {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    .hero .btn {
+      padding: 15px 30px;
+      background-color: #ff7f50;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      background-image: url('imgvrindavan/v7.jpeg'); /* Custom background image */
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero .btn:hover {
+      background-color: #3d0c91;
+    }
+
+    /* Places Section Styles */
+    .places-section {
+      padding: 50px 20px;
+      background-color: white;
+      text-align: center;
+    }
+
+    .places-section h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .places-cards {
+      display: flex;
+      justify-content: space-around;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      font-size: 24px;
+      margin: 15px 0;
+    }
+
+    .card p {
+      font-size: 16px;
+      color: #666;
+      padding: 0 15px;
+      margin-bottom: 20px;
+    }
+
+    /* Contact Us Section Styles */
+    .contact-section {
+      padding: 50px 20px;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    .contact-section form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact-section input,
+    .contact-section textarea {
+      width: 50%;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .contact-section button {
+      padding: 15px 30px;
+      background-color: #ff7f50;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-section button:hover {
+      background-color: #e56e3a;
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Section -->
+  <nav>
+    <div class="logo">
+      <h2>Land of devotion and divine bliss</h2>
+    </div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#places">Places to Visit</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Vrindavan</h1>
+      <!-- <p>Experience the beauty of nature and adventure in the heart of Krishna.</p> -->
+      <a href="#places" class="btn">Explore Now</a>
+    </div>
+  </section>
+
+  <!-- Places to Visit Section -->
+   <section id="places" class="places-section">
+    <h2>Must Visit Places</h2>
+    <div class="places-cards">
+      <div class="card">
+        <img src="imgvrindavan/Krishna Janmabhoomi.jpg" alt="Krishna Janmabhoomi">
+        <h3>Krishna Janmabhoomi</h3>
+        <p>The birthplace of Lord Krishna, this sacred site draws millions of devotees.</p>
+      </div>
+      <div class="card">
+        <img src="imgvrindavan/bake.jpg" alt="Banke Bihari Temple">
+        <h3>Banke Bihari Temple</h3>
+        <p>A revered temple in Vrindavan dedicated to Lord Krishna in his child form.</p>
+      </div>
+      <div class="card">
+        <img src="imgvrindavan/ghat.jpeg" alt="Yamuna Ghat">
+        <h3>Yamuna Ghat</h3>
+        <p>Spiritual boat rides and evening aarti make this spot unforgettable.</p>
+      </div>
+      <div class="card">
+        <img src="imgvrindavan/prem.jpg" alt="Prem Mandir">
+        <h3>Prem Mandir</h3>
+        <p>Marvel at the architectural brilliance and spiritual ambiance at night.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Visit Vrindavan. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

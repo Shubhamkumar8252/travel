@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To the Heart of Vaishno Devi</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+    }
+
+    nav .logo h2 {
+      font-size: 24px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      font-size: 18px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #444;
+    }
+
+    .hero {
+      background-image: url('imgjk/v4.jpeg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero-content h1 {
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    .hero .btn {
+      padding: 15px 30px;
+      background-color: #ff7f50;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero .btn:hover {
+      background-color: #e56e3a;
+    }
+
+    .places-section {
+      padding: 50px 20px;
+      background-color: white;
+      text-align: center;
+    }
+
+    .places-section h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .places-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      font-size: 24px;
+      margin: 15px 0;
+    }
+
+    .card p {
+      font-size: 16px;
+      color: #666;
+      padding: 0 15px;
+      margin-bottom: 20px;
+    }
+
+    .contact-section {
+      padding: 50px 20px;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    .contact-section form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact-section input,
+    .contact-section textarea {
+      width: 50%;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .contact-section button {
+      padding: 15px 30px;
+      background-color: #ff7f50;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-section button:hover {
+      background-color: #e56e3a;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">
+      <h2>To the Heart of Vaishno Devi</h2>
+    </div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#places">Places to Visit</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Vaishno Devi</h1>
+      <p>Experience the sacred journey to one of India's holiest shrines in Jammu & Kashmir.</p>
+      <a href="#places" class="btn">Explore Now</a>
+    </div>
+  </section>
+
+  <!-- Places to Visit -->
+  <section id="places" class="places-section">
+    <h2>Top Places to Visit in Vaishno Devi</h2>
+    <div class="places-cards">
+      <div class="card">
+        <img src="imgjk/vaishno.jpeg" alt="Vaishno Devi Bhawan">
+        <h3>Vaishno Devi Bhawan</h3>
+        <p>The main shrine located at Trikuta Hills, visited by millions of devotees each year.</p>
+      </div>
+      <div class="card">
+        <img src="imgjk/ardh.jpeg" alt="Ardh Kuwari Cave">
+        <h3>Ardh Kuwari Cave</h3>
+        <p>A holy cave where Goddess Vaishno is believed to have meditated for 9 months.</p>
+      </div>
+      <div class="card">
+        <img src="imgjk/bhair.jpeg" alt="Bhairavnath Temple">
+        <h3>Bhairavnath Temple</h3>
+        <p>Located near the main shrine, dedicated to Bhairav, whose darshan is essential after Vaishno Devi.</p>
+      </div>
+      <div class="card">
+        <img src="imgjk/v6.jpeg" alt="Charan Paduka">
+        <h3>Charan Paduka</h3>
+        <p>A sacred rock believed to bear the footprints of Goddess Vaishno Devi.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Visit Vaishno Devi. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

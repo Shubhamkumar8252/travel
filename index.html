@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel with Shubham</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: #000;
+      color: #f5f3f3;
+      padding: 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .site-logo {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+
+   nav ul li a {
+   position: relative;
+   color: #fff;
+   text-decoration: none;
+   padding: 8px 12px;
+   border-radius: 5px;
+   transition: background 0.3s, color 0.3s;
+   }
+
+   nav ul li a:hover,
+  nav ul li a.active {
+  background-color: #ff6347; /* Highlight color */
+  color: #fff;
+   }
+
+    .content {
+      padding: 20px;
+    }
+
+    .cont_bx h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .cont_bx p {
+      margin-bottom: 20px;
+    }
+
+    .cont_bx button {
+      padding: 10px 20px;
+      background: #ff6347;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .search_bx {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      align-items: center;
+    }
+
+    .search_bx .card {
+      background: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      flex: 1 1 200px;
+    }
+
+    .search_bx input[type="button"] {
+      background: #000;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .destinations {
+      display: none;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      color: #000;
+    }
+
+    .destinations.show {
+      display: block;
+    }
+
+    .destinations ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      list-style: none;
+    }
+
+    .destinations ul li {
+      background: #000;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .travel_bx h4 {
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+.cards .card {
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    color: #000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cards .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+    .cards .card {
+      background: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      width: 300px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      color: #000;
+    }
+
+    .cards .card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .btn_city {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .btn_city a {
+      background: #000;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #000;
+      color: white;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    .footer_content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer_links ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer_links ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer_social a {
+      color: white;
+      margin-right: 10px;
+      font-size: 1.2rem;
+    }
+
+    .footer_bottom {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    /* Reels Section Styles */
+    .reels_section {
+      display: none;
+      margin-top: 30px;
+      padding: 15px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    .reels_section.show {
+      display: block;
+    }
+
+    .reels_container {
+      display: flex;
+      overflow-x: auto;
+      gap: 15px;
+      scroll-behavior: smooth;
+      padding-bottom: 10px;
+    }
+
+    .reels_container::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .reels_container::-webkit-scrollbar-thumb {
+      background-color: #ff6347;
+      border-radius: 4px;
+    }
+
+    .reel {
+      flex: 0 0 auto;
+      width: 250px;
+      height: 440px;
+      background: #000;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    }
+
+    .reel video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .search_bx {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .cards {
+        justify-content: center;
+      }
+
+      .cards .card {
+        width: 100%;
+        max-width: 350px;
+      }
+
+      .footer_content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .reels_container {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo-box">
+        <img src="img/logo.png" class="site-logo" alt="Logo" />
+        <h4>Trails of Shubham</h4>
+      </div>
+      <ul>
+        <li><a href="#">Discover</a></li>
+        <li><a href="#">Community</a></li>
+        <li><a href="#">Deals</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="login.html">Register</a></li>
+        <li><a href="">Plan Itenary</a></li>
+      </ul>
+    </nav>
+    <div class="content">
+      <div class="cont_bx">
+        <h1>The best trip for you & your loved ones</h1>
+        <p>Creative taglines capture customer attention and imagination.</p>
+        <button id="exploreBtn">Explore Now</button>
+      </div>
+
+      <div class="destinations" id="destination-list">
+        <h4>Places to Visit</h4>
+        <ul>
+          <li onclick="window.location.href='udaipur.html'">Udaipur</li>
+          <li onclick="window.location.href='rishikesh.html'">Rishikesh</li>
+          <li onclick="window.location.href='manali.html'">Manali</li>
+          <li onclick="window.location.href='banaras.html'">Banaras</li>
+        </ul>
+      </div>
+
+      <div class="search_bx">
+        <div class="card">
+          <h4>Location</h4>
+          <input type="text" placeholder="Enter your destination" />
+        </div>
+        <div class="card">
+          <h4>Date</h4>
+          <input type="date" />
+        </div>
+        <div class="card">
+          <h4>People</h4>
+          <input type="number" placeholder="How many people?" />
+        </div>
+        <input type="button" value="Explore Now" id="exploreBtn2"/>
+        <!-- New Explore Reels Button -->
+        <input type="button" value="Explore Reels" id="exploreReelsBtn" style="background:#007bff; margin-left: 10px;"/>
+      </div>
+
+      <div class="travel_bx">
+        <h4>State to Travel</h4>
+        <div class="cards">
+          <!-- Existing Cards -->
+          <div class="card">
+            <h3>Rajasthan <img src="icon/india.jpg" width="20"/></h3>
+            <img src="imgudaipur/heros.jpg" alt="Udaipur"/>
+            <div class="btn_city">
+              <a href="udaipur.html">Udaipur</a>
+              <h5>Rajasthan<br/><span>$20</span></h5>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Uttarakhand <img src="icon/india.jpg" width="20"/></h3>
+            <img src="img/sanpitersburg.jpg" alt="Rishikesh"/>
+            <div class="btn_city">
+              <a href="rishikesh.html">Rishikesh</a>
+              <h5>Rishikesh<br/><span>$40</span></h5>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Uttar Pradesh <img src="icon/india.jpg" width="20"/></h3>
+            <img src="imgvrindavan/prem (2).jpg" alt="virndavan"/>
+            <div class="btn_city">
+              <a href="Vrindavan.html">Vrindavan</a>
+              <h5>Vrindavan<br/><span>$35</span></h5>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Uttar Pradesh <img src="icon/india.jpg" width="20"/></h3>
+            <img src="img/b7.jpeg" alt="Banaras"/>
+            <div class="btn_city">
+              <a href="banaras.html">Banaras</a>
+              <h5>Banaras<br/><span>$50</span></h5>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Jammu & Kashmir <img src="icon/india.jpg" width="20"/></h3>
+            <img src="imgjk/v5.jpeg" alt="vaishno devi"/>
+            <div class="btn_city">
+              <a href="kashmir.html">Vaishno devi</a>
+              <h5>Srinagar<br/><span>$60</span></h5>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Uttarakhand <img src="icon/india.jpg" width="20"/></h3>
+            <img src="imgrishikesh/h23.jpeg" alt="Haridwar"/>
+            <div class="btn_city">
+              <a href="haridwar.html">Haridwar</a>
+              <h5>Haridwar<br/><span>$42</span></h5>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Reels Section -->
+      <div class="reels_section" id="reelsSection">
+        <h4>Explore Travel Reels</h4>
+        <div class="reels_container" id="reelsContainer">
+          <!-- 10 videos -->
+          <div class="reel">
+            <video src="videos/reel_1.mp4" controls muted preload="metadata"></video>
+          </div>
+          <div class="reel">
+            <video src="videos/reel_2.mp4" controls muted preload="metadata"></video>
+          </div>
+          <div class="reel">
+            <video src="videos/reel_3.mp4" controls muted preload="metadata"></video>
+          </div>
+          <div class="reel">
+            <video src="videos/reel 7.mp4" controls muted preload="metadata"></video>
+          </div>
+          <div class="reel">
+            <video src="videos/reel_5.mp4" controls muted preload="metadata"></video>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <footer>
+    <div class="footer_content">
+      <div class="footer_logo logo-box">
+        <img src="icon/travel.png" class="site-logo" alt="Logo" />
+        <h4>Waves & Roads by Shubham</h4>
+      </div>
+      <div class="footer_links">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Destinations</a></li>
+          <li><a href="#">Special Deals</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer_social">
+        <a href="https://www.facebook.com/profile.php?id=100016165322354"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/_the.shubham/"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer_bottom">
+      <p>&copy; 2025 Travel with Shubham. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("exploreBtn").addEventListener("click", function () {
+      document.getElementById("destination-list").classList.toggle("show");
+    });
+
+    document.getElementById("exploreBtn2").addEventListener("click", function () {
+      document.getElementById("destination-list").classList.toggle("show");
+    });
+
+    // Toggle Reels Section
+    document.getElementById("exploreReelsBtn").addEventListener("click", function () {
+      document.getElementById("reelsSection").classList.toggle("show");
+    });
+
+    const navLinks = document.querySelectorAll("nav ul li a");
+
+    navLinks.forEach(link => {
+    link.addEventListener("click", function () {
+      navLinks.forEach(l => l.classList.remove("active"));
+      this.classList.add("active");
+    });
+  });
+  </script>
+</body>
+</html>

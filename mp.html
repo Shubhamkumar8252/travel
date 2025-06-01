@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visit Ujjain</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+    }
+
+    nav .logo h2 {
+      font-size: 24px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      font-size: 18px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #444;
+    }
+
+    .hero {
+      background-image: url('https://via.placeholder.com/1200x600?text=Mahakaleshwar+Temple+Ujjain');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero-content h1 {
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    .hero .btn {
+      padding: 15px 30px;
+      background-color: #ff7f50;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero .btn:hover {
+      background-color: #e56e3a;
+    }
+
+    .places-section {
+      padding: 50px 20px;
+      background-color: white;
+      text-align: center;
+    }
+
+    .places-section h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .places-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      font-size: 24px;
+      margin: 15px 0;
+    }
+
+    .card p {
+      font-size: 16px;
+      color: #666;
+      padding: 0 15px;
+      margin-bottom: 20px;
+    }
+
+    .contact-section {
+      padding: 50px 20px;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    .contact-section form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact-section input,
+    .contact-section textarea {
+      width: 50%;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .contact-section button {
+      padding: 15px 30px;
+      background-color: #ff7f50;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-section button:hover {
+      background-color: #e56e3a;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">
+      <h2>Visit Ujjain</h2>
+    </div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#places">Places to Visit</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Ujjain</h1>
+      <p>Discover the spiritual capital of Madhya Pradesh, home of Mahakaleshwar Jyotirlinga.</p>
+      <a href="#places" class="btn">Explore Now</a>
+    </div>
+  </section>
+
+  <!-- Places to Visit -->
+  <section id="places" class="places-section">
+    <h2>Top Places to Visit in Ujjain</h2>
+    <div class="places-cards">
+      <div class="card">
+        <img src="https://via.placeholder.com/400x300?text=Mahakaleshwar+Temple" alt="Mahakaleshwar Temple">
+        <h3>Mahakaleshwar Temple</h3>
+        <p>One of the 12 Jyotirlingas of Lord Shiva and the most revered temple in Ujjain.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x300?text=Ram+Ghat" alt="Ram Ghat">
+        <h3>Ram Ghat</h3>
+        <p>A sacred bathing ghat on the Shipra River, vibrant during the Kumbh Mela.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x300?text=Kal+Bhairav+Temple" alt="Kal Bhairav Temple">
+        <h3>Kal Bhairav Temple</h3>
+        <p>Unique temple dedicated to Kal Bhairav, where liquor is offered as part of the rituals.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x300?text=Sandipani+Ashram" alt="Sandipani Ashram">
+        <h3>Sandipani Ashram</h3>
+        <p>Ancient gurukul where Lord Krishna is believed to have studied under Guru Sandipani.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Visit Ujjain. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
